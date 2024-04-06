@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <header>
+        <h1>Recipes <a href="#" id="add-link">+</a></h1>
+        
+    </header>
+
+    <div id="recipe-list" class="columns"></div>
+    
+        <!-- The Modal -->
+      <div id="dialog" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('dialog').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span>
+              <section id="dialog-details">
+                <form id="recipe-form" method="post" class="hidden">
+                    <input type="hidden" id="_id" name="_id">
+                    <p>
+                        <label for="name ">Recipe Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </p>
+                    <p>
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" required />
+                    </p>
+        
+                    <section class="columns">
+                        <p id="img-prev-section">
+                            <img id="img-prev">
+                        </p>
+                        <p>
+                            <label for="img">Upload Image:</label>
+                            <input type="file" id="img" name="img" accept="image/*" />
+                        </p>
+                    </section>
+        
+                    <p id="ingredients-p ">
+                        <label class="inline">Ingredients:</label>
+                        <a href="#" id="add-ingredient">Add Ingredient</a>
+                        <section id="ingredient-boxes"></section>
+                    </p>
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
+                </form>
+
+                <section id="recipe-details" class="hidden">
+
+                </section>
+            </section>
+          </div>
+        </div>
+      </div>   
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
